@@ -1,10 +1,14 @@
 import { useState } from 'react'
 
+import Calculadora from './components/Calculadora'
+
 function App() {
 
   return (
     <>
-    <h1>Olá Mundo!</h1>
+      <div className="container">
+        <Calculadora />
+      </div>
     </>
   )
 }
