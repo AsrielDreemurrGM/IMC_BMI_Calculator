@@ -12,6 +12,17 @@
     border-radius: 16px;
 }
 
+/* 
+    Remove setas de acréscimo e decréscimo;
+    Incluir "inner" e "outer" garante compatibilidade com 
+    navegadores mais antigos;
+    Fonte: Stackoverflow;
+*/
+::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
 
 .formularioInput, .resultadoInput {
     max-width: 180px;

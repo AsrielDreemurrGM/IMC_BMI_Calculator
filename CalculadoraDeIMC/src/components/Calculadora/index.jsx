@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import styles from './Calculadora.module.css'
 
@@ -18,15 +18,15 @@ const Calculadora = () => {
     return (
         <div className={styles.containerDoFormulario}>
             <form className={styles.formulario}>
-            <h1>Calculadora de IMC</h1>
+                <h1>Calculadora de IMC</h1>
                 <label className={styles.formularioLabel} htmlFor="peso">Digite o Seu Peso</label>
-                <input onChange={evento => setPeso(parseFloat(evento.target.value))} className={styles.formularioInput} type="text" id="peso" placeholder="Digite o seu Peso" />
+                <input onChange={evento => setPeso(parseFloat(evento.target.value))} className={styles.formularioInput} type="number" id="peso" placeholder="Digite o seu Peso" />
                 <label className={styles.formularioLabel} htmlFor="altura">Digite a Sua Altura</label>
-                <input onChange={evento => setAltura(parseFloat(evento.target.value))} className={styles.formularioInput} type="text" id="altura" placeholder="Digite a sua Altura" />
+                <input onChange={evento => setAltura(parseFloat(evento.target.value))} className={styles.formularioInput} type="number" id="altura" placeholder="Digite a sua Altura" />
             </form>
             <div className={styles.containerDoResultado}>
                 <button onClick={calculaIMC} className={styles.botaoCalcular} type="button">Calcular</button>
-                <input value={resultado} className={styles.resultadoInput} type="text" placeholder='Resultado' disabled />
+                <input value={resultado.toFixed(2)} className={styles.resultadoInput} type="text" placeholder='Resultado' disabled />
             </div>
         </div>
     )
