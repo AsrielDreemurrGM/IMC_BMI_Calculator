@@ -16,10 +16,10 @@ const Calculadora = () => {
     }
 
     const classificacaoDoIMC = () => {
+        if (resultado == 0) return <>Digite Sua Altura e Peso e<br /> Depois Clique Calcular</>;
         if (resultado < 18.5) return 'Abaixo do Peso';
         if (resultado < 25) return 'Peso Ideal (Parabéns)';
-        if (resultado < 30) return <>Atenção!<br />Você Está Acima do Peso
-        </>;
+        if (resultado < 30) return <>Atenção!<br />Você Está Acima do Peso</>;
         if (resultado < 35) return 'Obesidade Grau I';
         if (resultado < 40) return 'Obesidade Grau II (Severa)';
         return 'Obesidade Grau III (Mórbida)';
