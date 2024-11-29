@@ -15,6 +15,16 @@ const Calculadora = () => {
         }
     }
 
+    const classificacaoDoIMC = () => {
+        if (resultado < 18.5) return 'Abaixo do Peso';
+        if (resultado < 25) return 'Peso Ideal (Parabéns)';
+        if (resultado < 30) return <>Atenção!<br />Você Está Acima do Peso
+        </>;
+        if (resultado < 35) return 'Obesidade Grau I';
+        if (resultado < 40) return 'Obesidade Grau II (Severa)';
+        return 'Obesidade Grau III (Mórbida)';
+    }
+
     return (
         <div className={styles.containerDoFormulario}>
             <form className={styles.formulario}>
@@ -27,6 +37,10 @@ const Calculadora = () => {
             <div className={styles.containerDoResultado}>
                 <button onClick={calculaIMC} className={styles.botaoCalcular} type="button">Calcular</button>
                 <input value={resultado.toFixed(2)} className={styles.resultadoInput} type="text" placeholder='Resultado' disabled />
+                <div className={styles.classificacao}>
+                    <h3>Sua Classificação: </h3>
+                    <p>{classificacaoDoIMC()}</p>
+                </div>
             </div>
         </div>
     )

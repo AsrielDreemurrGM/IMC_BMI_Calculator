@@ -1,7 +1,7 @@
 .containerDoFormulario {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .formulario {
@@ -64,4 +64,13 @@ input::-webkit-inner-spin-button {
 .botaoCalcular:hover {
     cursor: pointer;
     background-color: #0084db;
+}
+
+.classificacao {
+    text-align: center;
+}
+
+.classificacao p {
+    color: white;
+    font-size: large;
 }
