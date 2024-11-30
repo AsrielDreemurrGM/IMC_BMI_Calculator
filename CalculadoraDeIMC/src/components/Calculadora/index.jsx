@@ -29,9 +29,9 @@ const Calculadora = () => {
         <div className={styles.containerDoFormulario}>
             <form className={styles.formulario}>
                 <h1>Calculadora de IMC</h1>
-                <label className={styles.formularioLabel} htmlFor="peso">Digite o Seu Peso</label>
+                <label className={styles.formularioLabel} htmlFor="peso">Digite o Seu Peso (Em KG)</label>
                 <input onChange={evento => setPeso(parseFloat(evento.target.value))} className={styles.formularioInput} type="number" id="peso" placeholder="Digite o seu Peso" />
-                <label className={styles.formularioLabel} htmlFor="altura">Digite a Sua Altura</label>
+                <label className={styles.formularioLabel} htmlFor="altura">Digite a Sua Altura (Em Metros)</label>
                 <input onChange={evento => setAltura(parseFloat(evento.target.value))} className={styles.formularioInput} type="number" id="altura" placeholder="Digite a sua Altura" />
             </form>
             <div className={styles.containerDoResultado}>
